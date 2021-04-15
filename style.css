@@ -1,9 +1,8 @@
 body
 {
-    background: purple;
+    background-color: purple;
     background-size: cover;
     background-position: center;
-
 }
 .login-box
 {
