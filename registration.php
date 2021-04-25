@@ -4,6 +4,13 @@ session_start();
 $con = mysqli_connect('localhost', 'root', '');
 
 mysqli_select_db($con, 'userregistration');
+$username = mysqli_query("SELECT name FROM usertable WHERE name='$name'");
+$count = mysqli_num_rows($username);
+
+if($count!=0)
+{
+    die("Name already exists! Please type another name");
+}
 $name = $_POST['user'];
 $pass = $_POST['password'];
 
