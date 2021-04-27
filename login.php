@@ -32,7 +32,7 @@
 
             <div class="col-md-6 login-right">
                 <h2>Register Here</h2>
-                <form action="registration.php" method="post">
+                <form action="registration2.php" method="post">
                     <div class="form-group">
                         <label>Usename</label>
                         <input type="text" name="user" class="form-control" required>
