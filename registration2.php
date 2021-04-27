@@ -1,10 +1,18 @@
 <?php
 require_once 'connection.php';
+require_once 'exp.php';
 
 $link = mysqli_connect($host, $user, $password, $database)
     or die("Error " . mysqli_error($link));
 $name = $_POST['user'];
 $pass = $_POST['password'];
+
+if(!preg_match($exp, $name)) //'/^w{5,}$/'
+{
+    header('location:login.php');
+    exit();
+}
+
 $query = "SELECT name FROM usertable WHERE name='$name'";
 $result = mysqli_query($link, $query) or die("Error " . mysqli_error($link));
 $num = mysqli_num_rows($result);
