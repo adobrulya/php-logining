@@ -7,7 +7,7 @@ $link = mysqli_connect($host, $user, $password, $database)
 $name = $_POST['user'];
 $pass = $_POST['password'];
 
-if(!preg_match($exp, $name)) //'/^w{5,}$/'
+if(!preg_match($exp, $name))
 {
     header('location:login.php');
     exit();
