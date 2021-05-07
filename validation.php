@@ -1,8 +1,8 @@
 <?php
 session_start();
-header('location:login.php');
+//header('location:login.php');
 require_once 'connection.php';
-require_once 'exp.php';
+
 
 $link = mysqli_connect($host, $user, $password, $database)
 or die("Error " . mysqli_error($link));
